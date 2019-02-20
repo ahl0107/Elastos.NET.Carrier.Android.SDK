@@ -38,7 +38,7 @@ before_install:
   # Gradle
   - wget http://services.gradle.org/distributions/gradle-4.10.1-all.zip
   - unzip -q gradle-4.10.1-all.zip
-  - export GRADLE_HOME=$PWD/gradle-4.10.1-all
+  - export GRADLE_HOME=$PWD/gradle-4.10.1
   - export PATH=$GRADLE_HOME/bin:$PATH
 
 install:
