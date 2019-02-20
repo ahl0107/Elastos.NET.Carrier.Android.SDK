@@ -48,8 +48,8 @@ install:
 before_script:
   - export HOST_IP=`ifconfig eth0 | grep 'inet addr' | awk '{ print $2}' | awk  -F"[:]" '{ print $2}'`
   - echo $HOST_IP
-  - sed -i 's/192.168.0.107/'${HOST_IP}'/g' app/src/androidTest/java/org/elastos/carrier/robot/Robot.java
-  - cat app/src/androidTest/java/org/elastos/carrier/robot/Robot.java
+  - sed -i 's/192.168.0.107/'${HOST_IP}'/g' lib/src/androidTest/java/org/elastos/carrier/robot/Robot.java
+  - cat lib/src/androidTest/java/org/elastos/carrier/robot/Robot.java
   - sed -i 's/127.0.0.1/'${HOST_IP}'/g' /tmp/carrier/etc/carrier/tests.conf
   - cat /tmp/carrier/etc/carrier/tests.conf
   - export LD_LIBRARY_PATH=/tmp/carrier/lib/
