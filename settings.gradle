@@ -1,1 +1,2 @@
-include ':lib'
+include ':lib', ':app'
+project(':app').projectDir = new File('apps/FileTransfer/app')
